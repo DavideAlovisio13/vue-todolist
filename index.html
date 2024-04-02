@@ -37,10 +37,23 @@
                 <a href="#" class="list-group-item list-group-item-action" v-for="(item, index) in toDoList"
                     :key="toDoList.id">
                     <div class="d-flex w-100 justify-content-between align.align-items-center p-2">
-                        <h5 :class="{'text-decoration-line-through': item.done}" @click="DoneTrueFalse(item.id)">{{item.text}}</h5>
-                        <span class="badge bg-primary rounded-pill d-flex justify-content-center align-items-center fs-6" @click="deleteElement(item.id)">delete <i class="fa-solid fa-trash p-1" aria-hidden="true"></i></span>
+                        <h5 :class="{'text-decoration-line-through': item.done}" @click="DoneTrueFalse(item.id)">
+                            {{item.text}}</h5>
+                        <span
+                            class="badge bg-primary rounded-pill d-flex justify-content-center align-items-center fs-6"
+                            @click="deleteElement(item.id)">delete <i class="fa-solid fa-trash p-1"
+                                aria-hidden="true"></i></span>
                     </div>
                 </a>
+
+                <div class="mb-3 my-5">
+                    <h2 class="text-center">Inserisci nuovo elemento</h2>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Inserisci elemento"
+                            aria-label="Recipient's username" aria-describedby="button-addon2" v-model="elementText" @keyup.enter="addElement">
+                        <button class="btn btn-primary" type="button" id="button-addon2" @click="addElement">Button</button>
+                    </div>
+                </div>
             </div>
         </main>
     </div>
