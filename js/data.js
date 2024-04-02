@@ -2,31 +2,31 @@
 export const toDoList = [
     {
         id: 1,
-        text: 'Fare i gigi',
+        text: 'Fare i compiti',
         done: false
     },
 
     {
         id: 2,
-        text: 'Fare i compiti',
+        text: 'Lavare i piatti',
         done: false
     },
 
     {
         id: 3,
-        text: 'Fare i compiti',
+        text: 'Disfare il borsone di allenamento',
         done: false
     },
 
     {
         id: 4,
-        text: 'Fare i compiti',
+        text: 'Fare la spesa',
         done: false
     },
 
     {
         id: 5,
-        text: 'Fare i compiti',
+        text: 'Lavare i vestiti',
         done: false
     }
 ]

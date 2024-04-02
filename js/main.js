@@ -1,6 +1,8 @@
+
 import { toDoList } from './data.js'
 // destrutturazione del metodo createApp, mettendola nella variabile vue
 const { createApp } = Vue;
+
 
 // iniziamo ad usare il metodo appena importato, ritornando la mia applicazione e montandola su #app
 createApp({ //option object
@@ -40,7 +42,7 @@ createApp({ //option object
                 text: this.elementText,
                 done: false
             }
-             // generiamo l'id del nuovo elemento
+            // generiamo l'id del nuovo elemento
             let newId = 0;
             // per ogni elemento nella lista
             this.toDoList.forEach((el) => {
@@ -56,7 +58,6 @@ createApp({ //option object
             this.toDoList.push(newElem);
         }
     },
-
     mounted() {
         console.log(this.toDoList)
     } //lifecycle hook, inseriamo un console.log per controllare se this.toDoList funziona
