@@ -37,8 +37,8 @@
                 <a href="#" class="list-group-item list-group-item-action" v-for="(item, index) in toDoList"
                     :key="toDoList.id">
                     <div class="d-flex w-100 justify-content-between align.align-items-center p-2">
-                        <h5 :class="{'text-decoration-line-through': item.done}" class="">{{item.text}}</h5>
-                        <span class="badge bg-primary rounded-pill d-flex justify-content-center align-items-center fs-6">delete <i class="fa-solid fa-trash p-1" aria-hidden="true"></i></span>
+                        <h5 :class="{'text-decoration-line-through': item.done}" @click="DoneTrueFalse(item.id)">{{item.text}}</h5>
+                        <span class="badge bg-primary rounded-pill d-flex justify-content-center align-items-center fs-6" @click="deleteElement(item.id)">delete <i class="fa-solid fa-trash p-1" aria-hidden="true"></i></span>
                     </div>
                 </a>
             </div>
